@@ -4,9 +4,9 @@
 
 <% @languages.each do |language| %>
   <li>
-
-    <%= link_to language_path(language) do %>
-    <%= language.name %>
-    <% end %>
+   <%= language.name %> 
+   <%= link_to "Show", language_path(language) %>
+   <%= link_to "edit", edit_language_path(language) %>
+    <%= button_to "Destroy", language, method: :delete %>
   </li>
 <% end %>
