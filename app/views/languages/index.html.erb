@@ -1,0 +1,12 @@
+<h1>
+  this is our language index page
+</h1>
+
+<% @languages.each do |language| %>
+  <li>
+
+    <%= link_to language_path(language) do %>
+    <%= language.name %>
+    <% end %>
+  </li>
+<% end %>
