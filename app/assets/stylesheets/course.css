@@ -1,0 +1,32 @@
+.sections-container {
+  width: 100%;
+}
+
+.section {
+  background-color: rgb(200, 194, 194);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+.section a {
+  color: rgb(33, 33, 204);
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
