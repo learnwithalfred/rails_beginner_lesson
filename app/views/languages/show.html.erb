@@ -4,5 +4,45 @@
 
 <%= @language.name %>
 
+<div id="courses">
+  <div class="course_row">
+    <% @courses.each do |course| %>
+      <div class="course_card">
+        <%= link_to language_course_path(@language, course), class:"course-link" do %>
+          <div class="course_header">
+            <h5 class="course_title">
+              Course
+            </h5>
+          </div>
+          <div class="course_content">
+            <h4>
+              <%= course.name %>
+            </h4>
+            <p><%=course.description %></p>
+          </div>
+          <div class="course_footer">
+            <div class="footer_left">
+              <p>
+                <%= course.category.name %>
+              </p>
+            </div>
+            <div class="footer_right">
+              <p>
+                <% if course.lectures.count == 1 %>
+                1 lesson
+                <% elsif course.lectures.count > 1 %>
+                <%= course.lectures.count %> lessons
+                <% else %>
+                No lessons
+                <% end %>
+              </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 
 <%= link_to "edit", edit_language_path(@language) %>

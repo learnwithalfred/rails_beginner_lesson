@@ -8,6 +8,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/1 or /courses/1.json
   def show
+    @language = Language.find(params[:language_id])
   end
 
   # GET /courses/new

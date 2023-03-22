@@ -1,4 +1,4 @@
-<h1>
+<!-- <h1>
   this is our language index page
 </h1>
 
@@ -9,4 +9,30 @@
    <%= link_to "edit", edit_language_path(language) %>
     <%= button_to "Destroy", language, method: :delete %>
   </li>
-<% end %>
+<% end %> -->
+
+
+
+<div class="container">
+  <div class="left-section">
+    <ul class="language-list">
+      <% @languages.each do |language| %>
+      <li class="language-item">
+        <%= link_to language.name, language_path(language), class: "language-link" %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="right-section">
+    <h3>
+      Explore some catalog
+    </h3>
+    <div class="card-list">
+      <% @popular_languages.each do |language| %>
+      <div class="card">
+        <%= link_to language.name, language_path(language), class: "language-link" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

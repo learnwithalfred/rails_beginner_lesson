@@ -3,9 +3,11 @@ class LanguagesController < ApplicationController
   
   def index
     @languages = Language.all
+    @popular_languages = Language.where(isPopular: true)
   end
 
   def show
+    @courses = @language.courses   
   end
 
 

@@ -1,10 +1,40 @@
-<p style="color: green"><%= notice %></p>
+<h1><%= @course.name %></h1>
+<h5>
+  <% if @course.lectures.count == 1 %>
+  1 lesson
+  <% elsif @course.lectures.count > 1 %>
+  <%= @course.lectures.count %> lessons
+  <% else %>
+  No lessons
+  <% end %>
+</h5>
+<p>
+  course category
+</p>
 
-<%= render @course %>
-
-<div>
-  <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %>
-
-  <%= button_to "Destroy this course", @course, method: :delete %>
+<% if @course.sections.any? %>
+<div class="sections-container">
+  <h2>Syllabus:</h2>
+  <% @course.sections.each do |section| %>
+  <div class="section">
+    <h3><%= section.name %></h3>
+    <p><%= section.description %></p>
+    <% if section.lectures.any? %>
+    <ul>
+      <% section.lectures.each do |lecture| %>
+      <li>
+        <%= link_to language_course_lecture_path(@language, @course, lecture) do %>
+        <%= lecture.name %> (<%= lecture.url %>)
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+    <% else %>
+    <p>No lessons in this section.</p>
+    <% end %>
+  </div>
+  <% end %>
 </div>
+<% else %>
+<p>No sections in this course.</p>
+<% end %>

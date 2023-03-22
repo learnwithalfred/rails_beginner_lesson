@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  resources :lectures
+  
   resources :sections
-  resources :courses
+
   resources :categories
-  resources :languages
+  resources :languages do
+    resources :courses do 
+      resources :lectures
+    end
+  end
 
   # get '/languages', to: 'languages#index', as: 'languages'
   # get '/languages/new', to: 'languages#new', as: 'new_language'

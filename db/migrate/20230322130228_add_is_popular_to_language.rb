@@ -1,0 +1,5 @@
+class AddIsPopularToLanguage < ActiveRecord::Migration[7.0]
+  def change
+    add_column :languages, :isPopular, :boolean, default: false
+  end
+end
