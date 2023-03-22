@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-  before_action :set_section, only: %i[ show edit update destroy ]
+  before_action :set_section, only: %i[show edit update destroy]
 
   # GET /sections or /sections.json
   def index
@@ -7,8 +7,7 @@ class SectionsController < ApplicationController
   end
 
   # GET /sections/1 or /sections/1.json
-  def show
-  end
+  def show; end
 
   # GET /sections/new
   def new
@@ -16,8 +15,7 @@ class SectionsController < ApplicationController
   end
 
   # GET /sections/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /sections or /sections.json
   def create
@@ -25,7 +23,7 @@ class SectionsController < ApplicationController
 
     respond_to do |format|
       if @section.save
-        format.html { redirect_to section_url(@section), notice: "Section was successfully created." }
+        format.html { redirect_to section_url(@section), notice: 'Section was successfully created.' }
         format.json { render :show, status: :created, location: @section }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class SectionsController < ApplicationController
   def update
     respond_to do |format|
       if @section.update(section_params)
-        format.html { redirect_to section_url(@section), notice: "Section was successfully updated." }
+        format.html { redirect_to section_url(@section), notice: 'Section was successfully updated.' }
         format.json { render :show, status: :ok, location: @section }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class SectionsController < ApplicationController
     @section.destroy
 
     respond_to do |format|
-      format.html { redirect_to sections_url, notice: "Section was successfully destroyed." }
+      format.html { redirect_to sections_url, notice: 'Section was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_section
-      @section = Section.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def section_params
-      params.require(:section).permit(:name, :description, :course_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_section
+    @section = Section.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def section_params
+    params.require(:section).permit(:name, :description, :course_id)
+  end
 end

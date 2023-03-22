@@ -1,24 +1,21 @@
 class LanguagesController < ApplicationController
   before_action :set_language, only: %i[show edit update destroy]
-  
+
   def index
     @languages = Language.all
     @popular_languages = Language.where(isPopular: true)
   end
 
   def show
-    @courses = @language.courses   
+    @courses = @language.courses
   end
-
 
   def new
     @language = Language.new
   end
 
-  def edit
-  end
+  def edit; end
 
- 
   def create
     @language = Language.new(language_params)
     if @language.save
@@ -27,7 +24,6 @@ class LanguagesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
 
   def update
     if @language.update(language_params)
@@ -43,12 +39,12 @@ class LanguagesController < ApplicationController
   end
 
   private
+
   def language_params
     params.require(:language).permit(:name)
   end
 
   def set_language
-     @language = Language.find(params[:id])
+    @language = Language.find(params[:id])
   end
-
 end
