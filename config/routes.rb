@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  get '/about', to: 'homes#about', as: 'about_me'
   resources :sections
 
   resources :categories
