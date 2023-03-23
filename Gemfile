@@ -66,7 +66,7 @@ end
 gem 'devise'
 gem 'faker'
 
-gem 'devise_security_extension'
+# gem 'devise_security_extension'
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
