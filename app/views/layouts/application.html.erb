@@ -8,12 +8,15 @@
     <%= stylesheet_link_tag "nav" %>
     <%= stylesheet_link_tag "course" %>
     <%= stylesheet_link_tag "language" %>
+    <%= stylesheet_link_tag "flash" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= render "shared/nav" %>
+   <%= render "shared/nav" %>
+   <%= render "shared/flash" %>
+
     <div class="main-container">
     <%= yield %>
     </div>
