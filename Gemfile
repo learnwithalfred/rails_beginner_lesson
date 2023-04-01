@@ -70,6 +70,8 @@ end
 gem 'devise'
 gem 'faker'
 
+gem 'rails-controller-testing'
+
 # gem 'devise_security_extension'
 
 group :test do
