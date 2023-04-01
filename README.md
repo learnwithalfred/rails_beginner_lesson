@@ -7,7 +7,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[React_Rails_online_shop\] ](#-react_rails_online_shop-)
+- [📖 \[Rails_beginner_lesson\] ](#-rails_beginner_lesson-)
   - [🛠 Built With ](#-built-with-)
   - [💻 Getting Started ](#-getting-started-)
     - [Setup](#setup)
@@ -16,7 +16,7 @@
   - [⭐️ Show your support ](#️-show-your-support-)
   - [📝 License ](#-license-)
 
-# 📖 [React_Rails_online_shop] <a name="about-project"></a>
+# 📖 [Rails_beginner_lesson] <a name="about-project"></a>
 
 > In this course, we will learn how to build a Learning Management System (LMS) from scratch using Ruby on Rails. We will cover all the CRUD (Create, Read, Update, Delete) functionalities in Ruby and explore advanced topics such as authentication, authorization, associations, and RSpec testing
 
