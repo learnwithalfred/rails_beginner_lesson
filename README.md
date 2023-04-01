@@ -48,8 +48,8 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder and install the dependencies.:
 
 ```sh
-  git clone github.com/learnwithalfred/lesson.git
-  cd lesson
+  git clone github.com/learnwithalfred/rails_beginner_lesson.git
+  cd rails_beginner_lesson
   bundle install
   rails server
 ```
